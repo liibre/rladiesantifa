@@ -23,7 +23,8 @@ Here, we define the dark purple from RLadies
 
 ``` r
 #colors
-rladies <- "#562457" #rladies purple
+rladies <- "#562457" #rladies purple, for a lighter option use: #88398A
+red.antifa <- '#a70000'
 ```
 
 Here we load the ANTIFA image. Public domain icon from [The Noun
@@ -37,14 +38,14 @@ img <- readPNG("figs/noun_Antifa_1245689.png")
 Finally, we create the hexSticker:
 
 ``` r
-sticker(~ antifa(bg.col = rladies), # bg color for antifa logo
+sticker(~ antifa(bg.col = red.antifa), # bg color for antifa logo
         package = "",
         s_x = .7, s_y = .7,
         s_width = 3.5, s_height = 3.5,
         p_size = 13,
         h_fill = rladies, #bg color for hexsticker
         h_color = "black",
-        filename = "hexsticker/rladies_antifa.png")
+        filename = "hexsticker/rladies_antifa_red.png")
 ```
 
-![](hexsticker/rladies_antifa.png)
+![](hexsticker/rladies_antifa_red.png)
