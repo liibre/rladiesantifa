@@ -27,7 +27,7 @@ Here, we define the dark purple from RLadies
 
 ```{r}
 #colors
-rladies <- "#562457" #rladies purple
+rladies <- "#562457" #rladies purple, for a lighter option use: #88398A
 ```
 
 Here we load the ANTIFA image. Public domain icon from [The Noun Project](https://thenounproject.com/search/?q=antifa&i=1245689).
