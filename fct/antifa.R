@@ -1,8 +1,8 @@
 # set up a plot with a circle
-antifa <- function(x = "RLADIES+", bg.col = '#a70000') {
+antifa <- function(x = "RLADIES+", bg.col = '#a70000', size = 3) {
 # we recommend to keep the black and red color palette for the ANTIFA flag
   # if you change the background, please do not use yellow
-  if (bg.col %in% c("#FFFFCC", "#FFFF99", "#FFFF66",
+  if (bg.col %in% c("#FFFFCC", "#FFFF99", "#FFFF66", #from light yellow1 to dark yellow4
                     "#FFFF33", "#FFFF00", "#CCCC00",
                     "#999900", "#666600", "#333300")) {
     stop("it is not a good idea to use any type of yellow in an antifa flag")
@@ -14,8 +14,8 @@ antifa <- function(x = "RLADIES+", bg.col = '#a70000') {
 
   # add text
   arctext(x = x, center = c(0, 0), radius = 1.1,
-          middle = pi/2, cex = 2, col = "white")
+          middle = pi/2, cex = size, col = "white")
   arctext(x = "ANTIFA", center = c(0, 0), radius = 1.1,
           middle = 3*pi/2,
-          clockwise = FALSE, cex = 2, col = "white")
+          clockwise = FALSE, cex = size, col = "white")
 }
