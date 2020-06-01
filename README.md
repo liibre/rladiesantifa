@@ -37,7 +37,7 @@ img <- readPNG("figs/noun_Antifa_1245689.png")
 Finally, we create the hexSticker:
 
 ``` r
-sticker(~ antifa(), # bg color for antifa logo
+sticker(~ antifa("RLADIES+"),
         package = "",
         s_x = .7, s_y = .7,
         s_width = 3.5, s_height = 3.5,
