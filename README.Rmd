@@ -1,9 +1,12 @@
+---
+output: github_document
+---
 
 # Code to create rladies antifa hexsticker
 
 You will need to have installed and loaded the following libraries:
 
-``` r
+```{r}
 # libraries
 library(hexSticker)
 library(png)
@@ -13,30 +16,30 @@ library(plotrix)
 
 In addition, load these functions
 
-``` r
+```{r}
 # helper functions
 source("fct/addImg.R")
 source("fct/antifa.R")
 ```
 
+
 Here, we define the dark purple from RLadies
 
-``` r
+```{r}
 #colors
 rladies <- "#562457" #rladies purple
 ```
 
-Here we load the ANTIFA image. Public domain icon from [The Noun
-Project](https://thenounproject.com/search/?q=antifa&i=1245689).
+Here we load the ANTIFA image. Public domain icon from [The Noun Project](https://thenounproject.com/search/?q=antifa&i=1245689).
 
-``` r
+```{r}
 #antifa image
 img <- readPNG("figs/noun_Antifa_1245689.png")
 ```
 
 Finally, we create the hexSticker:
 
-``` r
+```{r}
 sticker(~ antifa(bg.col = rladies), # bg color for antifa logo
         package = "",
         s_x = .7, s_y = .7,
@@ -47,4 +50,7 @@ sticker(~ antifa(bg.col = rladies), # bg color for antifa logo
         filename = "hexsticker/rladies_antifa.png")
 ```
 
+
 ![](hexsticker/rladies_antifa.png)
+
+
