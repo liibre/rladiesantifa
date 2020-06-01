@@ -4,7 +4,7 @@ antifa <- function(x = "RLADIES+", bg.col = '#a70000', text.size = 3) {
   img <- readPNG("figs/noun_Antifa_1245689.png")
   # we recommend to keep the black and red color palette for the ANTIFA flag
   # if you change the background, please do not use yellow
-  if (grep("#", bg.col) == 1) {
+  if (sum(grep("#", bg.col)) > 0) {
     hex.yellow <- c("#FFFFCC", "#FFFF99", "#FFFF66", #from light yellow1 to dark yellow4
                     "#FFFF33", "#FFFF00", "#CCCC00",
                     "#999900", "#666600", "#333300")
