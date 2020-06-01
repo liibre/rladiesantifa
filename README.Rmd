@@ -30,7 +30,7 @@ Here, we define the dark purple from RLadies
 rladies <- "#562457" #rladies purple, for a lighter option use: #88398A both from rladies color palete
 ```
 
-For the hexsticker we use the ANTIFA flag we use the public domain icon from [The Noun Project](https://thenounproject.com/search/?q=antifa&i=1245689). The function `antifa()` creates the flag with the desired title.
+For the ANTIFA flag we use the public domain icon from [The Noun Project](https://thenounproject.com/search/?q=antifa&i=1245689). The function `antifa()` creates the flag with the desired title.
 
 ```{r, fig.height = 6, fig.width = 6}
 #antifa image
