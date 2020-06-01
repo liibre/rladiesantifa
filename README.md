@@ -1,5 +1,5 @@
 
-# Code to create rladies antifa hexsticker
+# Code to create Rladies ANTIFA hexsticker
 
 You will need to have installed and loaded the following libraries:
 
