@@ -53,4 +53,25 @@ sticker(~ antifa("RLADIES+"),
 
 ![](hexsticker/rladies_antifa_red.png)
 
+```{r dark purle, echo = FALSE}
+sticker(~ antifa("RLADIES+", bg.col = rladies),
+        package = "",
+        s_x = .7, s_y = .7,
+        s_width = 3.5, s_height = 3.5,
+        p_size = 13,
+        h_fill = rladies, #bg color for hexsticker
+        h_color = "black",
+        filename = "hexsticker/rladies_antifa_purple.png")
+```
+
+```{r light purle, echo = FALSE}
+sticker(~ antifa("RLADIES+", bg.col = "#88398A"),
+        package = "",
+        s_x = .7, s_y = .7,
+        s_width = 3.5, s_height = 3.5,
+        p_size = 13,
+        h_fill = "#88398A", #bg color for hexsticker
+        h_color = "black",
+        filename = "hexsticker/rladies_antifa_light_purple.png")
+```
 
