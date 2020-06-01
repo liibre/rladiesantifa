@@ -2,10 +2,12 @@
 antifa <- function(x = "RLADIES+", bg.col = '#a70000', size = 3) {
 # we recommend to keep the black and red color palette for the ANTIFA flag
   # if you change the background, please do not use yellow
-  if (bg.col %in% c("#FFFFCC", "#FFFF99", "#FFFF66", #from light yellow1 to dark yellow4
-                    "#FFFF33", "#FFFF00", "#CCCC00",
-                    "#999900", "#666600", "#333300")) {
-    stop("it is not a good idea to use any type of yellow in an antifa flag")
+  hex.yellow <- c("#FFFFCC", "#FFFF99", "#FFFF66", #from light yellow1 to dark yellow4
+                  "#FFFF33", "#FFFF00", "#CCCC00",
+                  "#999900", "#666600", "#333300")
+  names.yellow <- grep("[goldyellow]", bg.col)
+  if (bg.col %in% hex.yellow | names.yellow > 0) {
+    stop("it is not a acceptable to use any type of yellow in an antifa flag")
   }
   plot(x = 0, y = 0, xlim = c(-2, 2), ylim = c(-2, 2),
        bty = "n", xaxt = "n", yaxt = "n", xlab = "", ylab = "", col = "white")
