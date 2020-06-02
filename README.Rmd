@@ -35,10 +35,11 @@ For the ANTIFA flag we use the public domain icon from [The Noun Project](https:
 
 ```{r examples, fig.height = 6, fig.width = 6}
 #antifa image
-antifa(text.size = 2.3)
+antifa(x = "¡liibre!", text.size = 2.3)
 antifa(x = "BIÓLOGXS", bg.col = "darkgreen", text.size = 2.3)
 antifa(x = "r-ladies+", bg.col = rladies, text.size = 2.3)
 ```
+
 To create the hexSticker the image should be on disk (`save = TRUE`)
 
 ```{r hex}
@@ -69,6 +70,7 @@ sticker(antifa(bg.col = rladies, text.size = 3, save = TRUE),
         filename = "hexsticker/rladies_antifa_purple.png")
 ```
 
+![](hexsticker/rladies_antifa_purple.png)
 
 ```{r light purle, echo = FALSE}
 sticker(antifa(bg.col = "#88398A", text.size = 3.5, save = TRUE),
@@ -82,3 +84,4 @@ sticker(antifa(bg.col = "#88398A", text.size = 3.5, save = TRUE),
         filename = "hexsticker/rladies_antifa_light_purple.png")
 ```
 
+![](hexsticker/rladies_antifa_light_purple.png)

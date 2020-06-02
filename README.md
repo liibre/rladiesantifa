@@ -32,7 +32,7 @@ function `antifa()` creates the flag with the desired title.
 
 ``` r
 #antifa image
-antifa(text.size = 2.3)
+antifa(x = "¡liibre!", text.size = 2.3)
 ```
 
 ![](README_files/figure-gfm/examples-1.png)<!-- -->
@@ -47,8 +47,9 @@ antifa(x = "BIÓLOGXS", bg.col = "darkgreen", text.size = 2.3)
 antifa(x = "r-ladies+", bg.col = rladies, text.size = 2.3)
 ```
 
-![](README_files/figure-gfm/examples-3.png)<!-- --> To create the
-hexSticker the image should be on disk (`save = TRUE`)
+![](README_files/figure-gfm/examples-3.png)<!-- -->
+
+To create the hexSticker the image should be on disk (`save = TRUE`)
 
 ``` r
 antifa(save = TRUE)
@@ -69,3 +70,7 @@ sticker(antifa(save = TRUE),
 ```
 
 ![](hexsticker/rladies_antifa_red.png)
+
+![](hexsticker/rladies_antifa_purple.png)
+
+![](hexsticker/rladies_antifa_light_purple.png)

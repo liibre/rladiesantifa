@@ -5,7 +5,7 @@ source("fct/addImg.R")
 source("fct/get_image.R")
 
 # set up a plot with a circle
-antifa <- function(x = "¡liibre!",
+antifa <- function(x = "r-ladies+",
                    bg.col = '#a70000',
                    text.size = 3,
                    save = FALSE,
