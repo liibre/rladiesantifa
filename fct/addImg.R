@@ -5,7 +5,7 @@ addImg <- function(
   y = NULL, # mid y coordinate for image
   width = NULL, # width of image (in x coordinate units)
   interpolate = TRUE # (passed to graphics::rasterImage) A logical vector (or scalar) indicating whether to apply linear interpolation to the image when drawing.
-){
+) {
   if (is.null(x) |
       is.null(y) |
       is.null(width)) {
@@ -21,7 +21,7 @@ addImg <- function(
     width / (USR[2] - USR[1]) * PIN[1] # convert width units to inches
   HEIi <- WIDi * ARp # height in inches
   HEIu <- HEIi / PIN[2] * (USR[4] - USR[3]) # height in units
-  rasterImage(image = obj,
+  graphics::rasterImage(image = obj,
               xleft = x - (width / 2),
               xright = x + (width / 2),
               ybottom = y - (HEIu / 2),

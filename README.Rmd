@@ -6,19 +6,19 @@ output: github_document
 
 You will need to have installed and loaded the following libraries:
 
-```{r}
+```{r, message=FALSE}
 # libraries
 library(hexSticker)
 library(png)
 library(grid)
 library(plotrix)
+library(grDevices)
+library(magick)
 ```
 
 In addition, load these functions
 
 ```{r}
-# helper functions
-source("fct/addImg.R")
 source("fct/antifa.R")
 ```
 
@@ -34,16 +34,20 @@ For the ANTIFA flag we use the public domain icon from [The Noun Project](https:
 
 ```{r, fig.height = 6, fig.width = 6}
 #antifa image
-antifa(text.size = 2.5)
+antifa(text.size = 2.3)
+antifa(x = "BIÓLOGAS", bg.col = "darkgreen", text.size = 2.3)
+antifa(x = "r-ladies+", bg.col = rladies, text.size = 2.3)
 ```
 
-Finally, we create the hexSticker:
+To create the hexSticker the image should be on disk (`save = TRUE`)
 
 ```{r}
-sticker(~ antifa(text.size = 3.5),
+antifa(save = TRUE)
+sticker(antifa(save = TRUE),
         package = "",
-        s_x = .7, s_y = .7,
-        s_width = 3.5, s_height = 3.5,
+        asp = 0.85,
+        s_x = 0.95, s_y = 0.95,
+        s_width = 1.2, s_height = 1.2,
         p_size = 13,
         h_fill = rladies, #bg color for hexsticker
         h_color = "black",
@@ -54,21 +58,24 @@ sticker(~ antifa(text.size = 3.5),
 ![](hexsticker/rladies_antifa_red.png)
 
 ```{r dark purle, echo = FALSE}
-sticker(~ antifa(bg.col = rladies, text.size = 3.5),
+sticker(antifa(bg.col = rladies, text.size = 3, save = TRUE),
         package = "",
-        s_x = .7, s_y = .7,
-        s_width = 3.5, s_height = 3.5,
+        asp = 0.85,
+        s_x = 0.95, s_y = 0.95,
+        s_width = 1.2, s_height = 1.2,
         p_size = 13,
         h_fill = rladies, #bg color for hexsticker
         h_color = "black",
         filename = "hexsticker/rladies_antifa_purple.png")
 ```
 
+
 ```{r light purle, echo = FALSE}
-sticker(~ antifa(bg.col = "#88398A", text.size = 3.5),
+sticker(antifa(bg.col = "#88398A", text.size = 3.5, save = TRUE),
         package = "",
-        s_x = .7, s_y = .7,
-        s_width = 3.5, s_height = 3.5,
+        asp = 0.85,
+        s_x = 0.95, s_y = 0.95,
+        s_width = 1.2, s_height = 1.2,
         p_size = 13,
         h_fill = "#88398A", #bg color for hexsticker
         h_color = "black",

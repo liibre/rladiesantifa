@@ -9,13 +9,13 @@ library(hexSticker)
 library(png)
 library(grid)
 library(plotrix)
+library(grDevices)
+library(magick)
 ```
 
 In addition, load these functions
 
 ``` r
-# helper functions
-source("fct/addImg.R")
 source("fct/antifa.R")
 ```
 
@@ -32,18 +32,37 @@ function `antifa()` creates the flag with the desired title.
 
 ``` r
 #antifa image
-antifa(text.size = 2.5)
+antifa(text.size = 2.3)
 ```
 
 ![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
-Finally, we create the hexSticker:
+``` r
+antifa(x = "BIÓLOGAS", bg.col = "darkgreen", text.size = 2.3)
+```
+
+![](README_files/figure-gfm/unnamed-chunk-4-2.png)<!-- -->
 
 ``` r
-sticker(~ antifa(text.size = 3.5),
+antifa(x = "r-ladies+", bg.col = rladies, text.size = 2.3)
+```
+
+![](README_files/figure-gfm/unnamed-chunk-4-3.png)<!-- -->
+
+To create the hexSticker the image should be on disk (`save = TRUE`)
+
+``` r
+antifa(save = TRUE)
+```
+
+    ## [1] "./figs/antifa.png"
+
+``` r
+sticker(antifa(save = TRUE),
         package = "",
-        s_x = .7, s_y = .7,
-        s_width = 3.5, s_height = 3.5,
+        asp = 0.85,
+        s_x = 0.95, s_y = 0.95,
+        s_width = 1.2, s_height = 1.2,
         p_size = 13,
         h_fill = rladies, #bg color for hexsticker
         h_color = "black",
