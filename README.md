@@ -13,7 +13,7 @@ library(grDevices)
 library(magick)
 ```
 
-In addition, load these functions
+In addition, load the `antifa()` function
 
 ``` r
 source("fct/antifa.R")
@@ -38,7 +38,7 @@ antifa(x = "¡liibre!", text.size = 2.3)
 ![](README_files/figure-gfm/examples-1.png)<!-- -->
 
 ``` r
-antifa(x = "BIÓLOGXS", bg.col = "darkgreen", text.size = 2.3)
+antifa(x = "biólogxs", text.size = 2.3)
 ```
 
 ![](README_files/figure-gfm/examples-2.png)<!-- -->
@@ -49,16 +49,13 @@ antifa(x = "r-ladies+", bg.col = rladies, text.size = 2.3)
 
 ![](README_files/figure-gfm/examples-3.png)<!-- -->
 
-To create the hexSticker the image should be on disk (`save = TRUE`)
+To create the hexSticker the image should be on disk (`save = TRUE`). We
+have seen that the text size is dependent on the OS. If it is too big or
+too small, use the argument `text.size` to control it.
 
 ``` r
-antifa(save = TRUE)
-```
-
-    ## [1] "./figs/antifa.png"
-
-``` r
-sticker(antifa(save = TRUE),
+antifa1 <- antifa(save = TRUE)
+sticker(antifa1,
         package = "",
         asp = 0.85,
         s_x = 1, s_y = 1,

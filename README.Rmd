@@ -17,7 +17,7 @@ library(grDevices)
 library(magick)
 ```
 
-In addition, load these functions
+In addition, load the `antifa()` function
 
 ```{r source}
 source("fct/antifa.R")
@@ -36,15 +36,15 @@ For the ANTIFA flag we use the public domain icon from [The Noun Project](https:
 ```{r examples, fig.height = 6, fig.width = 6}
 #antifa image
 antifa(x = "¡liibre!", text.size = 2.3)
-antifa(x = "BIÓLOGXS", bg.col = "darkgreen", text.size = 2.3)
+antifa(x = "biólogxs", text.size = 2.3)
 antifa(x = "r-ladies+", bg.col = rladies, text.size = 2.3)
 ```
 
-To create the hexSticker the image should be on disk (`save = TRUE`)
+To create the hexSticker the image should be on disk (`save = TRUE`). We have seen that the text size is dependent on the OS. If it is too big or too small, use the argument `text.size` to control it.
 
 ```{r hex}
-antifa(save = TRUE)
-sticker(antifa(save = TRUE),
+antifa1 <- antifa(save = TRUE)
+sticker(antifa1,
         package = "",
         asp = 0.85,
         s_x = 1, s_y = 1,
@@ -59,7 +59,11 @@ sticker(antifa(save = TRUE),
 ![](hexsticker/rladies_antifa_red.png)
 
 ```{r dark purle, echo = FALSE}
-sticker(antifa(bg.col = rladies, text.size = 3, save = TRUE),
+antifa2 <- antifa(bg.col = rladies, 
+                  save = TRUE, 
+                  text.size = 10, #change here if it is too big
+                  path = "./figs/antifa2.png")
+sticker(antifa2,
         package = "",
         asp = 0.85,
         s_x = 1, s_y = 1,
@@ -73,7 +77,11 @@ sticker(antifa(bg.col = rladies, text.size = 3, save = TRUE),
 ![](hexsticker/rladies_antifa_purple.png)
 
 ```{r light purle, echo = FALSE}
-sticker(antifa(bg.col = "#88398A", text.size = 3.5, save = TRUE),
+antifa3 <- antifa(bg.col = "#88398A", 
+                  save = TRUE,  
+                  text.size = 10, #change here if it is too big
+                  path = "./figs/antifa3.png")
+sticker(antifa3,
         package = "",
         asp = 0.85,
         s_x = 1, s_y = 1,
