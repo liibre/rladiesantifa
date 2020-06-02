@@ -5,7 +5,7 @@ source("fct/addImg.R")
 source("fct/get_image.R")
 
 # set up a plot with a circle
-antifa <- function(x = "R-LADIES+",
+antifa <- function(x = "¡liibre!",
                    bg.col = '#a70000',
                    text.size = 3,
                    save = FALSE,
@@ -31,15 +31,15 @@ antifa <- function(x = "R-LADIES+",
   img <- png::readPNG("figs/antifa_color.png")
   if (save) png(path, bg = 'transparent', res = 300, width = 480*300/72,
                 height = 480*300/72)
+  par(mar = c(0,0,0,0))
   plot(x = 0, y = 0, xlim = c(-2, 2), ylim = c(-2.5, 2.5),
        bty = "n", asp = 1, xaxt = "n", yaxt = "n", xlab = "", ylab = "", col = "white")
-  #plotrix::draw.circle(x = 0, y = 0, radius = 1, col = bg.col, border = bg.col)
   addImg(img, x =  0, y = 0, width = 8.7)
 
   # add text
   plotrix::arctext(x = x, center = c(0, 0), radius = 2.15,
           middle = pi/2, cex = text.size, col = "white")
-  plotrix::arctext(x = "ANTIFASCISTAS", center = c(0, 0), radius = 2.15,
+  plotrix::arctext(x = "ANTIFA", center = c(0, 0), radius = 2.15,
           middle = 3*pi/2,
           clockwise = FALSE, cex = text.size, col = "white")
   if (save) {
