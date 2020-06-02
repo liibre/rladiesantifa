@@ -1,6 +1,7 @@
-#' This function takes the antifa logo, edits the color of the flag and includes
-#' text. It can save the ong on disk and return the path to be used in the next
-#' step, that is creating the hexSticker
+# This function takes the antifa logo, edits the color of the flag and includes
+# text. It can save the png on disk and return the path to be used in the next
+# step, that is creating the hexSticker
+
 source("fct/addImg.R")
 source("fct/get_image.R")
 
@@ -24,7 +25,7 @@ antifa <- function(x = "r-ladies+",
     avoid.yellow <- sum(gold, yellow)
   }
   if (avoid.yellow > 0)
-    stop("please don't be an ancap")
+    stop("please don't be an ancap, it is not acceptable to use yellow in an antifa flag")
   # Executes get_image with the background color
   get_image(bg.col = bg.col)
   # the edited antifa flag:
