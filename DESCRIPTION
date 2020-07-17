@@ -1,0 +1,26 @@
+Package: rladiesantifa
+Type: Package
+Title: Creates an antifa rladies hexsticker
+Version: 0.1.0
+Authors@R: c(
+  person("Andrea", "Sánchez-Tapia", email = "andreasancheztapia@gmail.com",
+         role = c("aut"), comment = c(ORCID = "0000-0002-3521-4338")),
+  person("Sara", "Mortara", email = "saramortara@gmail.com",
+         role = c("aut", "cre"), comment = c(ORCID = "0000-0001-6221-7537")))
+Maintainer: Liibre <liibre_lab@gmail.com>
+Description: Package developed for antifascit R programmers to create an R-Ladies+ anfifa flag.
+License: GPL (>= 3)
+BugReports: https://github.com/liibre/rladies_antifa/issues
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.0
+Imports:
+  graphics,
+  magick,
+  plotrix,
+  png
+Suggests:
+  hexSticker
+VignetteBuilder:
+  hexSticker,
+  png
