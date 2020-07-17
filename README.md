@@ -1,61 +1,39 @@
 
-# Code to create Rladies ANTIFA hexsticker
+This package depend on the following libraries:
 
-You will need to have installed and loaded the following libraries:
+  - **graphics**
+  - **magick**
+  - **plotrix**
 
-``` r
-# libraries
-library(hexSticker)
-library(png)
-library(grid)
-library(plotrix)
-library(grDevices)
-library(magick)
-```
+To install the package use:
 
-In addition, load the `antifa()` function
+    remotes::install_github("liibre/rladies_antifa")
 
-``` r
-source("fct/antifa.R")
-```
+In addition, you will have to load these packages:
+
+    # libraries
+    library(rladiesantifa)
+    library(hexSticker)
 
 Here, we define the dark purple from RLadies
 
-``` r
-#colors
-rladies <- "#562457" #rladies purple, for a lighter option use: #88398A both from rladies color palete
-```
+    #colors
+    rladies <- "#562457" #rladies purple, for a lighter option use: #88398A both from rladies color palete
 
 For the ANTIFA flag we use the public domain icon from [The Noun
 Project](https://thenounproject.com/search/?q=antifa&i=1245689). The
 function `antifa()` creates the flag with the desired title.
 
-``` r
-#antifa image
-antifa(x = "¡liibre!", text.size = 2.3)
-```
-
-![](README_files/figure-gfm/examples-1.png)<!-- -->
-
-``` r
-antifa(x = "biólogxs", text.size = 2.3)
-```
-
-![](README_files/figure-gfm/examples-2.png)<!-- -->
-
-``` r
-antifa(x = "r-ladies+", bg.col = rladies, text.size = 2.3)
-```
-
-![](README_files/figure-gfm/examples-3.png)<!-- -->
-
 To create the hexSticker the image should be on disk (`save = TRUE`). We
 have seen that the text size is dependent on the OS. If it is too big or
 too small, use the argument `text.size` to control it.
 
-``` r
-antifa1 <- antifa(save = TRUE)
-sticker(antifa1,
+    antifa1 <- antifa(save = TRUE, 
+                      image_dir = "./figures/", 
+                      image_name = "antifa1")
+
+``` 
+                  sticker(antifa1,
         package = "",
         asp = 0.85,
         s_x = 1, s_y = 1,
@@ -63,11 +41,13 @@ sticker(antifa1,
         p_size = 13,
         h_fill = rladies, #bg color for hexsticker
         h_color = "black",
-        filename = "hexsticker/rladies_antifa_red.png")
+        filename = "figures/rladies_antifa_red.png")
 ```
 
-![](hexsticker/rladies_antifa_red.png)
+## Other options of hexstickers
 
-![](hexsticker/rladies_antifa_purple.png)
+![](vignettes/figures/rladies_antifa_red.png)
 
-![](hexsticker/rladies_antifa_light_purple.png)
+![](vignettes/figures/rladies_antifa_purple.png)
+
+![](vignettes/figures/rladies_antifa_light_purple.png)
