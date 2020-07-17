@@ -1,0 +1,107 @@
+---
+title: "Package to create R-Ladies antifa hexsticker"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{antifa}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+This package depend on the following libraries:
+
+- __graphics__
+- __magick__
+- __plotrix__
+
+To install the package use:
+
+```
+remotes::install_github("liibre/rladies_antifa")
+```
+
+In addition, you will have to load these packages:
+
+```{r load, message=FALSE}
+# libraries
+devtools::load_all()
+library(hexSticker)
+# library(grid)
+# library(plotrix)
+# library(grDevices)
+# library(magick)
+```
+
+Here, we define the dark purple from RLadies
+
+```{r col}
+#colors
+rladies <- "#562457" #rladies purple, for a lighter option use: #88398A both from rladies color palete
+```
+
+For the ANTIFA flag we use the public domain icon from [The Noun Project](https://thenounproject.com/search/?q=antifa&i=1245689). The function `antifa()` creates the flag with the desired title.
+
+```{r examples, fig.height = 6, fig.width = 6}
+#antifa image
+antifa(x = "¡liibre!", text_size = 2.3)
+antifa(x = "biólogxs", text_size = 2.3)
+antifa(x = "r-ladies+", bg_col = rladies, text_size = 2.3)
+```
+
+To create the hexSticker the image should be on disk (`save = TRUE`). We have seen that the text size is dependent on the OS. If it is too big or too small, use the argument `text.size` to control it.
+
+```{r hex}
+antifa1 <- antifa(save = TRUE, 
+                  image_dir = "./figures/", 
+                  image_name = "antifa1")
+sticker(antifa1,
+        package = "",
+        asp = 0.85,
+        s_x = 1, s_y = 1,
+        s_width = 1, s_height = 1,
+        p_size = 13,
+        h_fill = rladies, #bg color for hexsticker
+        h_color = "black",
+        filename = "figures/rladies_antifa_red.png")
+```
+
+
+![](figures/rladies_antifa_red.png)
+
+```{r dark purle, echo = FALSE}
+antifa2 <- antifa(bg_col = rladies, 
+                  save = TRUE, 
+                  text_size = 10, #change here if it is too big
+                  image_dir = "./figures", 
+                  image_name = "antifa2")
+sticker(antifa2,
+        package = "",
+        asp = 0.85,
+        s_x = 1, s_y = 1,
+        s_width = 1, s_height = 1,
+        p_size = 13,
+        h_fill = rladies, #bg color for hexsticker
+        h_color = "black",
+        filename = "figures/rladies_antifa_purple.png")
+```
+
+![](figures/rladies_antifa_purple.png)
+
+```{r light purle, echo = FALSE}
+antifa3 <- antifa(bg_col = "#88398A", 
+                  save = TRUE,  
+                  text_size = 10, #change here if it is too big
+                  image_dir = "./figures", 
+                  image_name = "antifa3")
+
+sticker(antifa3,
+        package = "",
+        asp = 0.85,
+        s_x = 1, s_y = 1,
+        s_width = 1, s_height = 1,
+        p_size = 13,
+        h_fill = "#88398A", #bg color for hexsticker
+        h_color = "black",
+        filename = "figures/rladies_antifa_light_purple.png")
+```
+
+![](figures/rladies_antifa_light_purple.png)
