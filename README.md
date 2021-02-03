@@ -1,3 +1,7 @@
+# A package for antifa programmers 
+
+<img src="https://raw.githubusercontent.com/liibre/rladies_antifa/master/vignettes/figures/rladies_antifa_red.png" align="right" alt="" width="120" />
+
 
 This package depend on the following libraries:
 

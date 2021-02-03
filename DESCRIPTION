@@ -8,7 +8,7 @@ Authors@R: c(
   person("Sara", "Mortara", email = "saramortara@gmail.com",
          role = c("aut", "cre"), comment = c(ORCID = "0000-0001-6221-7537")))
 Maintainer: Liibre <liibre_lab@gmail.com>
-Description: Package developed for antifascit R programmers to create an R-Ladies+ anfifa flag.
+Description: Package developed for antifascit R programmers to create anfifa flags.
 License: GPL (>= 3)
 BugReports: https://github.com/liibre/rladies_antifa/issues
 Encoding: UTF-8

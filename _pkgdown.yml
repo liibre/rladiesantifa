@@ -1,0 +1,5 @@
+url: https://liibre.github.io/antifa
+
+template:
+  params:
+    bootswatch: cosmo

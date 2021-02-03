@@ -1,0 +1,10 @@
+pandoc: 2.3.1
+pkgdown: 1.6.1
+pkgdown_sha: ~
+articles:
+  rladiesantifa: rladiesantifa.html
+last_built: 2021-02-03T16:37Z
+urls:
+  reference: https://liibre.github.io/antifa/reference
+  article: https://liibre.github.io/antifa/articles
+

@@ -2,7 +2,7 @@
 title: "Package to create R-Ladies antifa hexsticker"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{antifa}
+  %\VignetteIndexEntry{Package to create R-Ladies antifa hexsticker}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
