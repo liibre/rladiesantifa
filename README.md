@@ -3,7 +3,7 @@
 
 <img src="https://raw.githubusercontent.com/liibre/rladies_antifa/master/vignettes/figures/rladies_antifa_red.png" align="right" alt="" width="120" />
 
-This package depend on the following libraries:
+This package depends on the following libraries:
 
   - **graphics**
   - **magick**
@@ -11,7 +11,7 @@ This package depend on the following libraries:
 
 To install the package use:
 
-    remotes::install_github("liibre/rladies_antifa")
+    remotes::install_github("liibre/rladiesantifa")
 
 In addition, you will have to load these packages:
 
