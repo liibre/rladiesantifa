@@ -1,5 +1,5 @@
 
-# A package for antifa programmers
+# A package for antifascist programmers
 
 <img src="https://raw.githubusercontent.com/liibre/rladies_antifa/master/vignettes/figures/rladies_antifa_red.png" align="right" alt="" width="120" />
 
@@ -24,7 +24,7 @@ Here, we define the dark purple from RLadies
     #colors
     rladies <- "#562457" #rladies purple, for a lighter option use: #88398A both from rladies color palete
 
-For the ANTIFA flag we use the public domain icon from [The Noun
+For the antifascist flag we use the public domain icon from [The Noun
 Project](https://thenounproject.com/search/?q=antifa&i=1245689). The
 function `antifa()` creates the flag with the desired title.
 
